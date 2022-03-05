@@ -39,8 +39,9 @@ dependencies {
 
     //dagger 2
     // apt command comes from the android-apt plugin
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.8'
-    implementation 'com.google.dagger:dagger:2.8'
-    compileOnly 'javax.annotation:jsr250-api:1.0'
+    implementation 'com.google.dagger:dagger-android:2.20'
+    implementation 'com.google.dagger:dagger-android-support:2.20' // if you use the support libraries
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.20'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.20'
 
 }

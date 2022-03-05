@@ -4,24 +4,29 @@ import android.util.Log;
 
 import javax.inject.Inject;
 
+@ActivityScope
 public class Coffee {
     private static final String TAG = "Coffee";
     @Inject
-     Farm farm;
+    Farm farm;
 
-     River river;
+    River river;
+    int sugar;
+    int milk;
 
     @Inject
-    public Coffee(River river) {
-        this.river=river;
+    public Coffee(River river, @Sugar int sugar, @Milk int milk) {
+        this.river = river;
+        this.sugar = sugar;
+        this.milk = milk;
     }
 
     @Inject
-    public void connectElectricity(){
+    public void connectElectricity() {
         Log.d(TAG, "gomaa: connecting......");
     }
 
-    public String getCoffeeCup(){
-        return farm.getBeans() +" + "+river.getWater();
+    public String getCoffeeCup() {
+        return farm.getBeans() + " + " + river.getWater() + "sugar: " + sugar + " milk: " + milk;
     }
 }
