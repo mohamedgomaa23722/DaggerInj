@@ -4,6 +4,7 @@ import android.util.Log;
 
 import javax.inject.Inject;
 
+@ActivityScope
 public class Farm {
     private static final String TAG = "Farm";
     @Inject

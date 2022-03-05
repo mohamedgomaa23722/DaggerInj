@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         AppComponent component = ((MainApplication) getApplication()).getAppComponent();
-        CoffeeComponent coffeeComponent=DaggerCoffeeComponent.builder().milk(4).sugar(2).appComponent(component).build();
+        CoffeeComponent coffeeComponent=component.getCoffeeComponentBuilder().milk(4).sugar(2).build();
         coffeeComponent.inject(this);
 
 
